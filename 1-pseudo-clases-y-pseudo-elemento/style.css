@@ -7,8 +7,9 @@
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h2 {
@@ -38,7 +39,6 @@ li {
 }
 
 li:hover, button:hover {
-    border: 1px solid black;
     background: rgb(223, 127, 1);
 }
 
