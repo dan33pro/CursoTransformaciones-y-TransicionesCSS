@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+ol {
+    margin: 0 auto;
+    width: 90vw;
+    list-style: none;
+}
+
+li {
+    font-size: 24px;
+    padding: 5px 20px;
+    background: orange;
+    border-radius: 12px;
+    margin: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+}
+
+li:hover, button:hover {
+    border: 1px solid black;
+    background: rgb(223, 127, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 5px;
+    background-color: orange;
+    border: 1px solid orangered;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.473);
+    color: white;
+}
+
+button:not(.test){
+    background: black;
+    border: 1px solid white;
+}
+
+ol li:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
+ol li:nth-child(1) a::before {
+    font-size: 19px;
+    content: "😁";
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+}
+ol li:nth-child(1) a::after {
+    font-size: 19px;
+    content: "😁";
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+}
