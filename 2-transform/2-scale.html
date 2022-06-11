@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Scale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cuadrado {
+            width: 20vw;
+            height: 20vw;
+            background-image: linear-gradient(to right bottom, #4371b5, #008dc6, #00a2aa, #00b06a, #82b412);
+            border-radius: 20%;
+            margin: 0 50px;
+        }
+
+        .cuadrado:hover {
+            transform: scale(1.1);
+        }
+
+        .circle {
+            width: 20vw;
+            height: 20vw;
+            background-image: linear-gradient(to right bottom, #4371b5, #008dc6, #00a2aa, #00b06a, #82b412);
+            border-radius: 50%;
+            margin: 0 50px;
+        }
+
+        .circle:hover {
+            transform: scale(1.2, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <div class="circle"></div>
+</body>
+</html>

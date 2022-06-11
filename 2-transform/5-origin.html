@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Rotate - Origin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cuadrado {
+            width: 40vw;
+            height: 40vw;
+            border-radius: 20%;
+            background-image: linear-gradient(to right top, #e13939, #e46a17, #da9500, #c3bd00, #9fe146);            margin: 0 50px;
+            transform-origin: right bottom;
+        }
+
+        .cuadrado:hover {
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Skew</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cuadrado {
+            width: 20vw;
+            height: 20vw;
+            background-image: linear-gradient(to right, #484a51, #585f7b, #6c73a7, #8587d3, #a599ff);            border-radius: 20%;
+            margin: 0 50px;
+        }
+
+        .cuadrado:hover {
+            /* Por default esta en el eje X */
+            transform: skew(20deg);
+        }
+
+        .cuadrado:nth-child(2):hover {
+            transform: skew(10deg, 10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+</body>
+</html>
