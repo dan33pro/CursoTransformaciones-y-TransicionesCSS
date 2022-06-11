@@ -24,7 +24,11 @@
             width: 40vw;
             height: 40vw;
             border: 1px solid black;
-            perspective: 40vw;
+            perspective: 80vw;
+        }
+
+        .container:hover .item {
+            transform: rotateX(360deg);
         }
 
         .item {
@@ -34,8 +38,8 @@
             background-image: linear-gradient(to top, #e139db, #cf52e8, #bc64f3, #a873fa, #947fff);
             border: 1px solid black;
             transform-style: preserve-3d;
-            transform: rotateX(45deg);
             opacity: 0.5;
+            transition: transform 2s;
         }
     </style>
 </head>

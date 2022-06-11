@@ -15,20 +15,20 @@
         body {
             height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 30vw;
         }
 
         .cuadrado {
-            width: 40vw;
-            height: 40vw;
+            width: 20vw;
+            height: 20vw;
             border-radius: 20%;
-            background-image: linear-gradient(to right top, #e13939, #e46a17, #da9500, #c3bd00, #9fe146);            margin: 0 50px;
+            background-image: linear-gradient(to right top, #e13939, #e46a17, #da9500, #c3bd00, #9fe146);
             transform-origin: right bottom;
+            transition: transform 1.5s;
         }
 
         .cuadrado:hover {
-            transform: rotate(10deg);
+            transform: rotate(360deg);
         }
     </style>
 </head>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Function Delay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            padding: 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container:hover .circle{
+            transform: translateX(80vw);
+        }
+
+        .circle {
+            width: 10vw;
+            height: 10vw;
+            max-width: 73px;
+            max-height: 73px;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin: 10px 0;
+        }
+        
+        .one {
+            background: fuchsia;
+            /* transition: propiedad tiempo aceleracion; */
+            transition: transform 1s linear;
+            /* delay: tiempo de demora al iniciar */
+            transition-delay: 0.5s;
+        }
+
+        .two {
+            background: orchid;
+            transition: transform 1s ease;
+            transition-delay: 0.5s;
+        }
+
+        .three {
+            background: violet;
+            transition: transform 1s ease-in;
+            transition-delay: 0.5s;
+        }
+
+        .four {
+            background: plum;
+            transition: transform 1s ease-out;
+            transition-delay: 0.5s;
+        }
+
+        .five {
+            background: thistle;
+            transition: transform 1s ease-in-out;
+            transition-delay: 0.5s;
+        }
+
+        .six {
+            background: lavender;
+            transition: transform 1s cubic-bezier(.17,.67,.88,.08);
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+        <div class="circle five"></div>
+        <div class="circle six"></div>
+    </div>
+</body>
+</html>

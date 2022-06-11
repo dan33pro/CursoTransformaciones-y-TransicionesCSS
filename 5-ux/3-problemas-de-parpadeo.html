@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Rotate</title>
+    <title>Problemas de Parpadeo | UX</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            padding: 0 5vw;
         }
 
-        .cuadrado {
-            width: 40vw;
-            height: 40vw;
-            border-radius: 20%;
-            background-image: linear-gradient(to right, #b4da8a, #acb372, #998f61, #7f6e54, #5e5248);
-            margin: 0 50px;
-            transition: transform 4s;
+        div {
+            border-radius: 50%;
+            width: 20vw;
+            height: 20vw;
+            transition: transform 1s ease;
         }
 
-        .cuadrado:hover {
-            transform: rotate(720deg);
+        .item {
+            background: palevioletred;
+        }
+
+        .container:hover .item{
+            transform: translateX(70vw);
+            transition: transform 0.8s ease;
         }
     </style>
 </head>
 <body>
-    <div class="cuadrado"></div>
+    <div class="container">
+        <div class="item"></div>
+    </div>
 </body>
 </html>

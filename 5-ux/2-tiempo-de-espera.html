@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo de espera | UX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            background: rgb(18, 18, 97);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: rgb(21, 21, 117);
+        }
+
+        .nav > li > ul {
+            position: absolute;
+            left: 0;
+        }
+
+        li:not( .nav > li) > ul {
+            position: absolute;
+            top: -10px;
+            right: -120%;
+        }
+
+        ul li:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        ul li:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+
+        .nav > li.principal-item {
+            width: 20vw;
+            border-radius: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav li  ul{
+            display: block;
+            visibility: hidden;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 400ms, visibility 400ms;
+            transition-delay: 300ms;
+        }
+
+        .nav li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 400ms, visibility 400ms;
+            transition-delay: 300ms;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="principal-item">
+            <a href="">Mujer</a>
+            <ul>
+                <li>
+                    <a href="">Camisetas</a>
+                </li>
+                <li>
+                    <a href="">Pantalones</a>
+                </li>
+                <li>
+                    <a href="">Shorts</a>
+                    <ul>
+                        <li><a href="">Cortos</a></li>
+                        <li><a href="">Semi-cortos</a></li>
+                        <li><a href="">Largos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="principal-item">
+            <a href="">Hombre</a>
+            <ul>
+                <li>
+                    <a href="">Camisetas</a>
+                </li>
+                <li>
+                    <a href="">Pantalones</a>
+                </li>
+                <li>
+                    <a href="">Chaquetas</a>
+                    <ul>
+                        <li><a href="">Jean</a></li>
+                        <li><a href="">Deportivas</a></li>
+                        <li><a href="">Cuero</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="principal-item">
+            <a href="">Niños</a>
+            <ul>
+                <li>
+                    <a href="">Pillamas</a>
+                </li>
+                <li>
+                    <a href="">Overol</a>
+                </li>
+                <li>
+                    <a href="">Zapatos</a>
+                    <ul>
+                        <li><a href="">Blancos</a></li>
+                        <li><a href="">Negros</a></li>
+                        <li><a href="">Deportivos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

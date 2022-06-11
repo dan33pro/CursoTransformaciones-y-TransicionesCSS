@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Duration</title>
+    <style>
+        /* bueno ahora volvere a los otros para ponerles la transision XD */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 80vw;
+            height: 20vw;
+            background: papayawhip;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container:hover .box{
+            transform: scale(1.2);
+        }
+
+        .box {
+            width: 20vw;
+            height: 20vw;
+            border-radius: 5px;
+        }
+
+        .box1 {
+            background: lightcoral;
+            transition: transform 500ms;
+        }
+
+       .box2 {
+            background: salmon;
+            transition: transform 1s;
+        }
+
+        .box3 {
+            background: darksalmon;
+            transition: transform 1.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+
+</html>

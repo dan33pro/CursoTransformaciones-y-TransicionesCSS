@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backface Visibility</title>
+    <title>Preferencias de movimiento</title>
     <style>
         * {
             margin: 0;
@@ -17,21 +18,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            perspective: 80vw;
         }
 
-        .card {
+        .card,
+        .container {
             width: 40vw;
             height: 40vh;
             max-width: 139px;
             max-height: 139px;
-            transform-style: preserve-3d;
             position: relative;
-            transition: transform 1s;
-        }
-
-        .card:hover {
-            transform: rotateY(180deg);
         }
 
         .face {
@@ -48,14 +43,48 @@
 
         .face.back {
             background: black;
-            transform: rotateX(180deg);
+            transition-duration: 0.6s;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .container:hover .back {
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .container {
+                perspective: 80vw;
+            }
+
+            .card {
+                transition: transform 1s;
+                transform-style: preserve-3d;
+            }
+
+            .container:hover .card {
+                transform: rotateY(180deg);
+            }
+
+            .face {
+                backface-visibility: hidden;
+            }
+
+            .back {
+                transform: rotateX(180deg);
+                opacity: 1;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="card">
-        <div class="face front"></div>
-        <div class="face back"></div>
+    <div class="container">
+        <div class="card">
+            <div class="face front"></div>
+            <div class="face back"></div>
+        </div>
     </div>
 </body>
+
 </html>
